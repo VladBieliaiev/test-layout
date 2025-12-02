@@ -1,0 +1,44 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.btn-register {
+  width: 98%;
+  height: $btn-sign-up-height-mobile;
+  margin-bottom: 0.7rem;
+
+  background: $color-btn-disabled;
+  border: none;
+  border-radius: $radius-sign-up-btn-mobile;
+
+  font-size: $font-size-tab-mobile;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-sign-up-btn;
+  color: $color-sign-up-btn-text-disabled;
+  text-transform: uppercase;
+
+  cursor: not-allowed;
+  transition: all 0.3s ease;
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  &.enabled {
+    background: $color-btn-enabled;
+    cursor: pointer;
+
+    &:hover {
+      background: $color-btn-hover;
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+  @include desktop {
+    height: $btn-sign-up-height-desktop;
+    border-radius: $radius-sign-up-btn-desktop;
+    font-size: $font-size-tab-desktop;
+    margin-bottom: 1rem;
+  }
+}

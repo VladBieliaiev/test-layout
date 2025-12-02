@@ -1,0 +1,20 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.hero {
+  position: relative;
+  z-index: $z-form;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 2rem 1rem;
+  width: 100%;
+  min-height: 100vh;
+
+  @include desktop {
+    padding: 3rem 2rem;
+  }
+}

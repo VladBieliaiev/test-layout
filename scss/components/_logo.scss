@@ -1,0 +1,26 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.logo {
+  position: absolute;
+  z-index: $z-logo;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include desktop {
+    top: 128px;
+    left: 49%;
+  }
+}
+
+.logo__image {
+  width: auto;
+  height: auto;
+  max-width: 242px;
+  display: block;
+
+  @include desktop {
+    max-width: 433px;
+  }
+}

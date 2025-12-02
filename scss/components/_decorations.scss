@@ -1,0 +1,60 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// Coins Stack
+.decoration-coins {
+  position: fixed;
+  bottom: -107px;
+  left: 55%;
+  transform: translateX(-50%);
+  z-index: $z-coins;
+
+  max-width: 1046px;
+  height: 306px;
+
+  pointer-events: none;
+
+  @include desktop {
+    max-width: 2340px;
+    height: 684px;
+    left: 49%;
+    bottom: -150px;
+  }
+}
+
+// Slot Machine - Bottom right corner
+.decoration-slot {
+  position: fixed;
+  bottom: -110px;
+  right: -17.5%;
+  z-index: $z-slot;
+
+  width: 312px;
+  height: 312px;
+
+  pointer-events: none;
+
+  @include desktop {
+    right: -250px;
+    bottom: -100px;
+    width: 1179px;
+    height: 1179px;
+
+    z-index: 0;
+  }
+}
+
+.decoration-particles {
+  display: none; // Hidden on mobile
+
+  @include desktop {
+    display: block;
+    position: fixed;
+    top: 150px;
+    right: -150px;
+    width: 2300px;
+    height: 1054.44px;
+    z-index: $z-particles;
+    pointer-events: none;
+  }
+}

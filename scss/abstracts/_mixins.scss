@@ -1,0 +1,13 @@
+// ----- Responsive Breakpoints -----
+
+@mixin mobile {
+  @media (min-width: 375px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}

@@ -1,0 +1,13 @@
+@use "../abstracts/variables" as *;
+
+// ----- Google Fonts Import -----
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap");
+
+// ----- Base Typography -----
+body {
+  font-family: $font-family;
+  font-weight: $font-weight-regular;
+  color: $color-text-primary;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

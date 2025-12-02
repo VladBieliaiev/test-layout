@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Energy Coins - Hold and Win. Бонус до 3 000 000 на депозит + 100FS!"
+    />
+    <meta name="theme-color" content="#000000" />
+    <title>Energy Coins - Hold and Win</title>
+    <link rel="stylesheet" href="/scss/main.scss" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Background -->
+      <div class="background"></div>
+
+      <!-- Top Shadow Overlay -->
+      <div class="overlay-top"></div>
+
+      <!-- Header -->
+      <header class="header">
+        <button class="header__login-btn">ВОЙТИ</button>
+        <div class="header__language">
+          <img src="/images/flags/ru.svg" alt="Russian" class="header__flag" />
+          <span class="header__lang-text">RU</span>
+          <svg
+            class="header__arrow"
+            width="10"
+            height="6"
+            viewBox="0 0 10 6"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1 1L5 5L9 1"
+              stroke="white"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </header>
+
+      <!-- Hero Section -->
+      <section class="hero">
+        <!-- Logo -->
+        <div class="logo">
+          <picture>
+            <source srcset="/images/logo-energy-coins.webp" type="image/webp" />
+            <img
+              src="/images/logo-energy-coins.png"
+              alt="Energy Coins - Hold and Win"
+              class="logo__image"
+            />
+          </picture>
+        </div>
+
+        <!-- Registration Form Container -->
+        <div class="form-container">
+          <h1 class="form-container__heading">
+            Бонус до <em>3 000 000</em><br />на депозит + <em>100FS!</em>
+          </h1>
+
+          <!-- Tab Switcher -->
+          <div class="tabs">
+            <button class="tab active" data-tab="phone">Телефон</button>
+            <button class="tab" data-tab="email">Почта</button>
+          </div>
+
+          <!-- Phone Form (visible by default) -->
+          <form class="form phone-form">
+            <div class="input-wrapper">
+              <img
+                src="/images/flags/at.svg"
+                alt="Austria"
+                class="input-flag"
+              />
+              <input
+                type="tel"
+                class="form-input"
+                placeholder="+93 XXX XX XX XX"
+                aria-label="Phone number"
+              />
+            </div>
+          </form>
+
+          <!-- Email Form (hidden by default) -->
+          <form class="form email-form" style="display: none">
+            <div class="input-wrapper">
+              <input
+                type="email"
+                class="form-input"
+                placeholder="Почта"
+                aria-label="Email"
+              />
+            </div>
+            <div class="input-wrapper">
+              <input
+                type="password"
+                class="form-input"
+                placeholder="Пароль"
+                aria-label="Password"
+              />
+            </div>
+          </form>
+
+          <!-- Registration Button -->
+          <button class="btn-register">РЕГИСТРАЦИЯ</button>
+
+          <!-- Login Link -->
+          <p class="login-text">
+            Уже есть аккаунт? <a href="#" class="login-link">Войти</a>
+          </p>
+        </div>
+      </section>
+
+      <div class="decorations">
+        <!-- Coins Stack -->
+        <picture>
+          <source srcset="/images/coins-stack.webp" type="image/webp" />
+          <img
+            src="/images/coins-stack.png"
+            alt="coins stack"
+            class="decoration-coins"
+          />
+        </picture>
+
+        <!-- Slot Machine -->
+        <picture>
+          <source srcset="/images/slot-machine.webp" type="image/webp" />
+          <img
+            src="/images/slot-machine.png"
+            alt="slot machine"
+            class="decoration-slot"
+          />
+        </picture>
+      </div>
+      <!-- Floating Particles (Desktop Only) -->
+      <div class="decoration-particles">
+        <picture>
+          <source srcset="/images/particles-floating.webp" type="image/webp" />
+          <img src="/images/particles-floating.png" alt="" />
+        </picture>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,178 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.form-container {
+  background: $bg-form-color;
+  border: $bg-form-border-mobile;
+  border-radius: $radius-form-mobile;
+  backdrop-filter: $bg-form-blur-mobile;
+  -webkit-backdrop-filter: $bg-form-blur-mobile; // Safari support
+
+  width: $form-width-mobile;
+
+  padding: 3.45rem 1.6rem 0;
+  margin-top: 0rem;
+
+  margin-bottom: 2.6rem;
+  z-index: $z-form;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &.email-active {
+    margin-bottom: 1.5rem;
+  }
+
+  @include desktop {
+    border: $bg-form-border-desktop;
+    border-radius: $radius-form-desktop;
+    backdrop-filter: $bg-form-blur-desktop;
+    -webkit-backdrop-filter: $bg-form-blur-desktop;
+
+    width: $form-width-desktop;
+
+    padding: 5.625rem 2.6rem 0;
+
+    margin-right: 2.5rem;
+    margin-bottom: 0;
+    margin-top: 1rem;
+
+    &.email-active {
+      margin-bottom: 0;
+      margin-top: 3.2rem;
+    }
+  }
+}
+
+.form-container__heading {
+  font-size: $font-size-heading-mobile;
+  font-weight: $font-weight-black;
+  line-height: $line-height-heading-mobile;
+  text-align: center;
+  color: $color-text-primary;
+
+  margin-bottom: 1.2rem;
+
+  // Italic emphasis on numbers
+  em {
+    font-style: italic;
+    font-weight: $font-weight-black;
+  }
+
+  @include desktop {
+    font-size: $font-size-heading-desktop;
+    line-height: $line-height-heading-desktop;
+    margin-bottom: 1.9rem;
+  }
+}
+
+// From layouts
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  margin-bottom: 1.28rem;
+
+  @include desktop {
+    gap: 1rem;
+    margin-bottom: 1.9rem;
+  }
+}
+
+.input-wrapper {
+  position: relative;
+  width: 98%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.input-flag {
+  position: absolute;
+  left: 0.7rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 2px;
+  pointer-events: none;
+
+  @include desktop {
+    left: 1rem;
+    width: 25.3px;
+    height: 25.3px;
+  }
+}
+
+.form-input {
+  width: 100%;
+  height: $input-height-mobile;
+
+  background: $color-tab-bg-input;
+  border: $input-border-mobile;
+  border-radius: $radius-input-mobile;
+
+  padding: $input-padding-mobile;
+  padding-left: 2.2rem;
+
+  font-size: $font-size-input-mobile;
+  line-height: $line-height-input-mobile;
+  color: $color-text-input;
+
+  &::placeholder {
+    color: $color-text-input;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $color-tab-bg-active;
+  }
+
+  @include desktop {
+    height: $input-height-desktop;
+    border: $input-border-desktop;
+    border-radius: $radius-input-desktop;
+    padding: 1rem 3.3rem;
+
+    font-size: $font-size-input-desktop;
+    line-height: $line-height-input-desktop;
+  }
+}
+
+// Email form - no flag
+.email-form .form-input {
+  padding-left: 1.1rem;
+
+  @include desktop {
+    padding-left: 1.6rem;
+  }
+}
+
+// Login text at bottom
+.login-text {
+  font-size: $font-size-small-text-mobile;
+  line-height: $line-height-small;
+  color: $color-text-muted;
+  text-align: center;
+  margin-bottom: 1.5rem;
+
+  @include desktop {
+    font-size: $font-size-small-text-desktop;
+    line-height: $line-height-small;
+    margin-bottom: 3.562rem;
+  }
+}
+
+.login-link {
+  background: $gradient-gold;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-decoration: none;
+  border-bottom: 1px solid #d6803b;
+  font-weight: $font-weight-semibold;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

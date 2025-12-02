@@ -1,0 +1,162 @@
+// ---- Colors ----
+// Primary Button States
+$color-btn-disabled: #664620;
+$color-btn-enabled: #947339;
+$color-btn-hover: #e9b352;
+
+// Tab Button
+$color-tab-bg-active: #ce8400;
+
+// Input
+$color-tab-bg-input: #1c1b1b;
+
+// Text Colors
+$color-text-primary: #ffffff;
+$color-text-muted: #797979;
+$color-text-input: #a4a4a4;
+$color-tab-text-active: rgba(255, 255, 255, 0.8);
+$color-tab-text-inactive: rgba(255, 255, 255, 0.6);
+$color-sign-up-btn-text-disabled: rgba(0, 0, 0, 0.6);
+
+// Borders
+$color-border-light: #ffffff;
+$color-border-input: #7a7a81;
+$color-border-tab: rgba(255, 255, 255, 0.2);
+
+// ---Gradients
+// gold gradient for text effects
+$gradient-gold: linear-gradient(0deg, #e9b352 0%, #d6803b 100%);
+// dark top overlay (above coins)
+$gradient-dark-top: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, #000 100%);
+$overlay-blend-mode: multiply;
+
+// ---- Background ----
+// Main page background
+// Background images (WebP + PNG fallback)
+$bg-page-image-png: "../images/background-electric.png";
+$bg-page-image-webp: "../images/background-electric.webp";
+$bg-page-fallback: lightgray;
+
+$bg-page-position-mobile: -386px 0px;
+$bg-page-mobile: 1185px 750px;
+
+$bg-page-position-desktop: -127.722px 0px;
+$bg-page-desktop: 111.111% 100%;
+
+$bg-page-repeat: no-repeat;
+
+// Form container background
+$bg-form-color: rgba(0, 0, 0, 0.51);
+$bg-form-border-desktop: 1px solid #ffffff;
+$bg-form-border-mobile: 0.6px solid #ffffff;
+$bg-form-blur-desktop: blur(15.5px);
+$bg-form-blur-mobile: blur(9.7px);
+
+// ---- Typography ----
+$font-family: "Inter", sans-serif;
+
+// Font Weights:
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+// --- Font Sizes
+$font-size-sign-in-btn: 0.875rem; // 14px
+
+// mobile
+$font-size-heading-mobile: 1.76rem; // 28.428px
+$font-size-tab-mobile: 0.734rem; // 11.752px
+$font-size-input-mobile: 0.65rem; // 10.397px
+$font-size-small-text-mobile: 0.585rem; // 9.363px
+
+// desktop
+$font-size-heading-desktop: 2.831rem; // 45.297px
+$font-size-tab-desktop: 1.17rem; // 18.725px
+$font-size-input-desktop: 1.02rem; // 16.385px
+$font-size-small-text-desktop: 1.17rem; // 18.725px
+
+// --- Line Height
+$line-height-sign-in-btn: 1rem; // 16px
+$line-height-sign-up-btn: 1.4; // 140%
+$line-height-small: 1.4; // 140%
+
+// mobile
+$line-height-heading-mobile: 2.25rem; // 36.456px
+$line-height-tab-mobile: 1.045rem; // 16.716px
+$line-height-input-mobile: 0.649rem; // 10.397px
+
+// desktop
+$line-height-heading-desktop: 3.63rem; // 58.09px
+$line-height-tab-desktop: 1.664rem; // 26.636px
+$line-height-input-desktop: 1rem; // 16.385px
+
+// ---- Spacing ----
+// ---Border Radius
+$radius-sign-in-btn: 0.5rem; // 8px
+
+// mobile
+$radius-form-mobile: 1.608rem; // 25.731px
+$radius-tabs-mobile: 0.626rem; // 10.03px
+$radius-tab-btn-mobile: 0.418rem; // 6.687px
+$radius-sign-up-btn-mobile: 0.418rem; // 6.687px
+$radius-input-mobile: 0.418rem; // 6.687px
+
+// desktop
+$radius-form-desktop: 2.563rem; // 41px
+$radius-tabs-descktop: 1rem; // 15.982px
+$radius-tab-btn-desktop: 0.664rem; // 10.654px
+$radius-sign-up-btn-desktop: 0.664rem; // 10.654px
+$radius-input-desktop: 0.664rem; // 10.654px
+
+// ---Button Heights
+$btn-sign-in-height: 2.125rem; // 34px
+
+// mobile
+$btn-tab-height-mobile: 2.089rem; // 33.433px
+$btn-sign-up-height-mobile: 2.298rem; // 36.776px
+
+// desktop
+$btn-tab-height-desktop: 3.329rem; // 53.272px
+$btn-sign-up-height-desktop: 3.662rem; // 58.599px
+
+// --- Form Dimensions
+// mobile - Phone tab
+$form-width-mobile: 350px; // 350px
+
+// desktop - Phone tab
+$form-width-desktop: 557px; // 557px
+$form-height-desktop-phone: 584px; // 584px
+// desktop - Email tab
+$form-height-desktop-email: 654px;
+
+// container
+$container-max-width: 375px; // Mobile first
+$container-padding: 1rem;
+
+// ---- Input Dimensions ----
+// mobile
+$input-width-mobile: 289.193px; // 289.193px
+$input-height-mobile: 36.776px; // 36.776px
+$input-padding-mobile: 12.537px 0; // Vertical padding
+$input-border-mobile: 1.672px solid $color-border-input;
+
+// desktop
+$input-width-desktop: 460.802px; // 460.802px
+$input-height-desktop: 58.599px; // 58.599px
+$input-padding-desktop: 19.977px 0; // Vertical padding
+$input-border-desktop: 2.664px solid $color-border-input;
+
+// ----- Breakpoints -----
+$breakpoint-mobile: 375px;
+$breakpoint-desktop: 1440px;
+
+// ----- Z-index -----
+$z-background: -1;
+$z-coins: 1;
+$z-form: 2;
+$z-slot: 3;
+$z-particles: 4;
+$z-logo: 5;
+$z-header: 10;

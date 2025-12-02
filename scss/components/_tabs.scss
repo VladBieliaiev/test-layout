@@ -1,0 +1,52 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.tabs {
+  display: flex;
+  gap: 0;
+  width: 98%;
+  margin-bottom: 1.2rem;
+  padding: 2px;
+  border: 2px solid $color-border-tab;
+  border-radius: $radius-tabs-mobile;
+  overflow: hidden;
+
+  @include desktop {
+    padding: 4px;
+    border-radius: $radius-tabs-descktop;
+    margin-bottom: 2rem;
+  }
+}
+
+.tab {
+  flex: 1;
+  height: $btn-tab-height-mobile;
+
+  background: transparent;
+  border-radius: $radius-tab-btn-mobile;
+
+  font-size: $font-size-tab-mobile;
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-tab-mobile;
+  color: $color-tab-text-inactive;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &.active {
+    background: $color-tab-bg-active;
+    color: $color-tab-text-active;
+  }
+
+  &:hover:not(.active) {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  @include desktop {
+    height: $btn-tab-height-desktop;
+    font-size: $font-size-tab-desktop;
+    line-height: $line-height-tab-desktop;
+    border-radius: $radius-tab-btn-desktop;
+    padding: 0.8125rem 4rem;
+  }
+}

@@ -1,0 +1,81 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: $z-header;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+
+  // Mobile padding
+  padding: 1.2rem 1.15rem;
+
+  @include desktop {
+    padding: 3.25rem 11.75rem;
+  }
+}
+
+.header__login-btn {
+  background: transparent;
+  border: 1px solid $color-border-light;
+  border-radius: $radius-sign-in-btn;
+
+  color: $color-text-primary;
+  font-size: $font-size-sign-in-btn;
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-sign-in-btn;
+
+  height: $btn-sign-in-height;
+  padding: 0 1.2rem;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.header__language {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  &:hover .header__arrow {
+    transform: translateY(2px);
+  }
+}
+
+.header__flag {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.header__lang-text {
+  color: $color-text-primary;
+  font-size: 1rem;
+  font-weight: $font-weight-medium;
+  line-height: 1;
+}
+
+.header__arrow {
+  transition: transform 0.3s ease;
+}
